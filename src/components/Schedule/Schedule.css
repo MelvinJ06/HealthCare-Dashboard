@@ -1,0 +1,211 @@
+.schedule {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.schedule-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #00cec9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.plus-btn {
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.calendar-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.arrow {
+  color: #354bac;
+  cursor: pointer;
+}
+
+.calendar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.day {
+  flex: 1;
+  background-color: #f8f9fd;
+  border-radius: 12px;
+  padding: 8px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #354bac;
+  min-width: 60px;
+}
+
+.active-day {
+  background-color: #e8edfb;
+}
+
+.time-slots {
+  margin-top: 8px;
+}
+
+.slot {
+  font-size: 13px;
+  margin: 2px 0;
+  color: #354bac;
+  font-weight: bold;
+}
+
+.slot.highlight {
+  background-color: #6c5ce7;
+  color: white;
+  padding: 4px 4px;
+  border-radius: 6px;
+}
+
+.appointments {
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap; 
+}
+
+.appointments .box {
+  flex: 1 1 50%;
+  min-width: 0;
+  padding: 2px;
+  border-radius: 50px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+.box.purple {
+  background-color: #2f2fa2;
+  padding: 10px;
+}
+
+.box.lightpurple {
+  background-color: #a29bfe;
+  padding: 10px;
+}
+
+.upcoming-title {
+  font-size: 16px;
+  margin: 10px 0 10px;
+  font-weight: bold;
+  color: #2f2fa2;
+}
+
+.upcoming-group {
+  font-size: 10px;
+}
+
+.upcoming-day {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.upcoming-tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.tag {
+  background-color: #e8edfb;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    max-width: 100%;
+    border-radius: 0px;
+    padding: 15px;
+  }
+
+  .appointments .box {
+    flex: 1 1 100%;
+  }
+
+  .calendar {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .day {
+    flex: 1 1 30%;
+    font-size: 13px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .calendar-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .appointments .box {
+    min-width: 100%;
+  }
+
+  .plus-btn, .avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
